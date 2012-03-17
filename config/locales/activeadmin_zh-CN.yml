@@ -43,4 +43,8 @@ zh-CN:
        merchant: "商盟商户"
        created_at: "创建时间"
        updated_at: "修改时间" 
+    comments:
+      title_content: "管理员评论"
+      no_comments_yet: "尚无评论"
+      add: "添加"
             
