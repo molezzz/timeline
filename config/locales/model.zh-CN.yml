@@ -1,0 +1,21 @@
+zh-CN:
+  activerecord:
+    models:
+      admin_user: "管理员"
+      merchant: "商盟商户"      
+    attributes:
+      merchant:
+        name: "商户名称"
+        icode: "识别码"
+        status: "状态"
+        description: "描述"
+        logo: "展示图片" 
+        status_options:
+         normal: "正常"         
+         invalid: "无效"
+         locked: "已锁定"
+    tips:      
+      merchant:
+        name: "例如： 保定博道网络科技有限公司"
+        status: "例如： 正常"
+        description: "例如： 地址、电话、折扣 等等"

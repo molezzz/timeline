@@ -13,3 +13,8 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+#防止中文出现复数 s
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.plural /(\.*[\u4e00-\u9fa5]+)$/i, '\1'
+end

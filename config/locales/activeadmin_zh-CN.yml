@@ -38,3 +38,9 @@ zh-CN:
     blank_slate:
       content: "暂时还没有%{resource_name}."
       link: "新建一个"
+      activeadmin:
+    labels:
+       merchant: "商盟商户"
+       created_at: "创建时间"
+       updated_at: "修改时间" 
+            

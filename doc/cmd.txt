@@ -1,0 +1,19 @@
+#环境
+
+
+#模型
+rails generate model merchant timeline_id:integer:index name:string icode:string:index status:string:index description:text logo:string
+
+#控制器
+
+#activeadmin
+rails generate active_admin:install
+rails generate active_admin:resource [MyModelName]
+
+#carrierwave
+rails generate uploader Avatar
+
+#cancan
+rails g cancan:ability
+
+

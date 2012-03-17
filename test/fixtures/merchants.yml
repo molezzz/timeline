@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  timeline_id: 1
+  name: MyString
+  icode: MyString
+  status: MyString
+  description: MyText
+  logo: MyString
+
+two:
+  timeline_id: 1
+  name: MyString
+  icode: MyString
+  status: MyString
+  description: MyText
+  logo: MyString
