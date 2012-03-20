@@ -11,6 +11,8 @@ zh-CN:
     new_model: "新建%{model}"
     edit_model: "编辑%{model}"
     delete_model: "删除%{model}"
+    create_model: "创建 %{model}"
+    update_model: "更新 %{model}"
     details: "%{model}详情"
     cancel: "取消"
     empty: "清空"
@@ -41,8 +43,10 @@ zh-CN:
       activeadmin:
     labels:
        merchant: "商盟商户"
+       actions: "操作"
        created_at: "创建时间"
-       updated_at: "修改时间" 
+       updated_at: "修改时间"
+       add_new_child_category: "添加子类" 
     comments:
       title_content: "管理员评论"
       no_comments_yet: "尚无评论"

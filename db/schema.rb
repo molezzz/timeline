@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120316031017) do
+ActiveRecord::Schema.define(:version => 20120317082419) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(:version => 20120316031017) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "categories", :force => true do |t|
+    t.integer  "parent_id",  :default => 0
+    t.string   "name",                      :null => false
+    t.string   "remark"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "categories", ["name"], :name => "index_categories_on_name"
+  add_index "categories", ["parent_id"], :name => "index_categories_on_parent_id"
+
   create_table "merchants", :force => true do |t|
     t.integer  "timeline_id"
     t.string   "name"
@@ -55,8 +66,10 @@ ActiveRecord::Schema.define(:version => 20120316031017) do
     t.string   "logo"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "category_id"
   end
 
+  add_index "merchants", ["category_id"], :name => "index_merchants_on_category_id"
   add_index "merchants", ["icode"], :name => "index_merchants_on_icode"
   add_index "merchants", ["status"], :name => "index_merchants_on_status"
   add_index "merchants", ["timeline_id"], :name => "index_merchants_on_timeline_id"

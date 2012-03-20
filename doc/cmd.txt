@@ -3,7 +3,9 @@
 
 #模型
 rails generate model merchant timeline_id:integer:index name:string icode:string:index status:string:index description:text logo:string
+rails generate model category parent_id:integer:index name:string:index remark:string
 
+rails generate migration add_category_id_to_merchant category_id:integer:index 
 #控制器
 
 #activeadmin
@@ -11,9 +13,11 @@ rails generate active_admin:install
 rails generate active_admin:resource [MyModelName]
 
 #carrierwave
-rails generate uploader Avatar
+rails generate uploader [name]
 
 #cancan
 rails g cancan:ability
 
+#Rspec 测试
+rails generate rspec:install
 

@@ -2,20 +2,43 @@ zh-CN:
   activerecord:
     models:
       admin_user: "管理员"
-      merchant: "商盟商户"      
+      merchant: "商盟商户"
+      category: "商户分类"      
     attributes:
       merchant:
         name: "商户名称"
+        timeline_id: "时间轴"
+        timeline: "时间轴"
+        category_id: "所属分类"
+        category: "所属分类"
         icode: "识别码"
         status: "状态"
         description: "描述"
-        logo: "展示图片" 
+        logo: "展示图片"
+        created_at: "签约时间"
+        updated_at: "最后修改时间" 
         status_options:
          normal: "正常"         
          invalid: "无效"
          locked: "已锁定"
+      category:
+        name: "分类名称"
+        remark: "备注"
+        parent_id: "上级分类"
+        parent: "上级分类"
+        children: "子类"
+        created_at: "创建时间"
+        updated_at: "最后修改时间" 
     tips:      
       merchant:
         name: "例如： 保定博道网络科技有限公司"
         status: "例如： 正常"
         description: "例如： 地址、电话、折扣 等等"
+      category:
+        name: "例如：餐饮娱乐"
+        remark: "例如：危险勿动"
+        parent_id: "例如：选择“餐饮娱乐”"
+        parent_id_on_edit: "留空为顶级分类"
+    errors:
+      category:
+        child_can_not_has_child: "不能在子类下创建子类"
