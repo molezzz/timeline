@@ -14,6 +14,8 @@ class Merchant < ActiveRecord::Base
   mount_uploader :logo,MerchantLogoUploader
   after_create :generate_icode
   
+  validates_presence_of :name
+  
   protected
   #生成商家唯一识别码
   def generate_icode

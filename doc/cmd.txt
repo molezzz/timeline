@@ -7,6 +7,7 @@ rails generate model category parent_id:integer:index name:string:index remark:s
 
 rails generate migration add_category_id_to_merchant category_id:integer:index 
 #控制器
+rails generate controller merchants
 
 #activeadmin
 rails generate active_admin:install
